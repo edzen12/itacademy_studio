@@ -1,0 +1,92 @@
+{% load static %}
+<section class="s-pt-130 s-pt-md-50 ls text-section">
+    <div class="divider-30"></div>
+    <div class="container">
+        <div class="row">
+            <div class="text-center col-md-12 justify-content-center text-block">
+                <img src="{% static 'img/vertical_line.png' %}" alt="">
+                <div class="divider-35"></div>
+                <div class="content">
+                    <h1>
+                        Lets Get Started
+                        <br> Your Project
+                    </h1>
+                    <p>
+                        We’ll help to achieve your goals and to grow business
+                    </p>
+                    <div class="divider-30"></div>
+                </div>
+                <img src="{% static 'img/vertical_line.png' %}" alt="">
+                <div>
+                    <div class="divider-40"></div>
+                    <a href="#" class="btn btn-outline-maincolor">Let’s Talk!</a>
+                    <div class="divider-30"></div>
+                </div>
+                <div class="img-wrap overflow-visible">
+                    <img src="{% static 'img/vertical_line.png' %}" alt="">
+                    <div class="divider-5 d-none d-xl-block"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="s-pt-50 s-pb-100 s-pt-lg-30 s-pb-lg-75 ls ms teaser-contact-icon main-icon s-parallax" id="contact">
+    <div class="corner corner-inverse"></div>
+    <div class="text-center img-wrap col-md-12">
+        <img src="img/dark_line_short.png" alt="">
+    </div>
+    <div class="container">
+        <div class="divider-10 d-none d-xl-block"></div>
+        <div class="row c-mb-50 c-mb-lg-0">
+            <div class="col-lg-4 text-center">
+                <div class="border-icon">
+                    <div class="teaser-icon">
+                        <img src="{% static 'img/icon1.png' %}" alt="">
+                    </div>
+                </div>
+                <h6>
+                    Call Us
+                </h6>
+                <p>
+                    <strong>New Accounts:</strong> {{setting.ph_number}}
+                    <br>
+                    <strong>Support:</strong> {{setting.ph_number_support}}
+                </p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="border-icon">
+                    <div class="teaser-icon">
+                        <img src="{% static 'img/icon3.png' %}" alt="">
+                    </div>
+                </div>
+                <h6>
+                    Write Us
+                </h6>
+                <p>
+                    <a href="mailto:{{setting.email}}" class="__cf_email__"  >
+                        {{setting.email}}
+                    </a>
+                </p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="border-icon">
+                    <div class="teaser-icon">
+                        <img src="{% static 'img/icon2.png' %}" alt="">
+                    </div>
+                </div>
+                <h6>
+                    Visit Us
+                </h6>
+                <p>
+                    {{setting.address}}
+                </p>
+            </div>
+        </div>
+        <div class="divider-30 d-none d-lg-block"></div>
+        <div class="text-center img-wrap col-md-12 layout-2">
+            <img src="{% static 'img/vertical_line.png' %}" alt="">
+        </div>
+    </div>
+    <div class="divider-10"></div>
+</section>
