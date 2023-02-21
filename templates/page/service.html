@@ -1,0 +1,102 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div id="canvas">
+	<div id="box_wrapper">
+		{% include 'base/header_pages.html' %}
+
+        <section class="page_title ls s-py-50 corner-title ls invise overflow-visible">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1>Services 3</h1>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="{% url 'home' %}">Главная</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#">Pages</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                Услуги
+                            </li>
+                        </ol>
+                        <div class="divider-15 d-none d-xl-block"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ls s-pt-50 s-pb-30 s-pb-lg-75 c-gutter-30 c-mb-30 service-item">
+            <div class="d-none d-lg-block divider-65"></div>
+            <div class="container">
+                <div class="row">
+                    {% for service in service_all %}
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="vertical-item text-center">
+                            <div class="item-media">
+                                <img src="{{service.img.url}}" alt="">
+                                <a title="" href="service-single1.html"></a>
+                            </div>
+                            <div class="item-content hero-bg">
+                                <h6>
+                                    <a href="service-single1.html">{{service.name}}</a>
+                                </h6>
+
+                                <p>
+                                    {{service.desc|truncatewords:10}}
+                                </p>
+                                <a href="service-single1.html" class="btn-link">Дальше</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!-- .col-* --> 
+                </div>
+            </div>
+            <div class="d-none d-lg-block divider-15"></div>
+        </section>
+
+        <section class="ls s-pt-50 s-pt-lg-60 s-pb-130 ls ms">
+            <div class="divider-65 d-none d-lg-block"></div>
+            <div class="container">
+                <div class="row c-mb-30">
+                    {% for serv in prices %}
+                    <div class="col-lg-4 col-md-12">
+
+                        <div class="pricing-plan {{serv.color}} ls">
+                            <div class="plan-name">
+                                <h3>
+                                    {{serv.name}}
+                                </h3>
+                            </div>
+                            <div class="price-wrap color-darkgrey">
+                                <span class="plan-sign">$</span>
+                                <span class="plan-price">49</span>
+                                <span class="plan-decimals">.95</span>
+                            </div>
+                            <div class="plan-description color-darkgrey">
+                                {{serv.name}}
+                            </div>
+                            <div class="plan-features">
+                                <ul class="list-bordered">
+                                    {{serv.desc_tarif|safe}}
+                                </ul>
+                            </div>
+                            <div class="plan-button">
+                                <a href="#" class="btn inverse-color1">get started</a>
+                            </div>
+                        </div>
+                        <div class="divider-15 d-none d-sm-block d-md-none"></div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+            <div class="divider-60 d-none d-lg-block"></div>
+        </section>
+		
+		{% include 'base/footer.html' %}
+	</div>
+</div>
+{% endblock content %}

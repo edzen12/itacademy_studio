@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from apps.project.models import * 
+from apps.service.models import Service
 
 
 def homepage(request):
@@ -21,3 +22,7 @@ def homepage(request):
         'sliders':sliders,  
     }
     return render(request, 'index.html', context)
+
+
+
+

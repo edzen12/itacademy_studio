@@ -40,19 +40,6 @@ class Slider(models.Model):
     class Meta:
         verbose_name_plural = 'Слайдер'
 
-
-class Service(models.Model):
-    img = models.ImageField(upload_to='service/')  
-    name = models.CharField(max_length=255, verbose_name= 'Название ')
-    desc = models.TextField(verbose_name= 'Описание')
-
-    def __str__(self) -> str:
-        return self.name
-    
-    class Meta:
-        verbose_name_plural = 'Услуги'
-
-
 class Plan(models.Model):
     img1 = models.ImageField(upload_to='plan/')  
     name1 = models.CharField(max_length=255, verbose_name= 'Название ')
