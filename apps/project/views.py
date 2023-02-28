@@ -24,5 +24,17 @@ def homepage(request):
     return render(request, 'index.html', context)
 
 
+def projects(request):
+    setting = Sett.objects.latest('id')  
+    categoryPortfolio = CategoryPortfolio.objects.all()
+    portfolio = Portfolio.objects.all()  
+    name_page = 'Проекты'
+    context = {
+        'setting':setting, 
+        'categoryPortfolio':categoryPortfolio,
+        'portfolio':portfolio,  
+        'name_page':name_page
+    }
+    return render(request, 'page/projects.html', context)
 
 

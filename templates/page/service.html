@@ -5,27 +5,7 @@
 	<div id="box_wrapper">
 		{% include 'base/header_pages.html' %}
 
-        <section class="page_title ls s-py-50 corner-title ls invise overflow-visible">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h1>Services 3</h1>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="{% url 'home' %}">Главная</a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="#">Pages</a>
-                            </li>
-                            <li class="breadcrumb-item active">
-                                Услуги
-                            </li>
-                        </ol>
-                        <div class="divider-15 d-none d-xl-block"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        {% include 'base/breadcrumbs.html' %} 
 
         <section class="ls s-pt-50 s-pb-30 s-pb-lg-75 c-gutter-30 c-mb-30 service-item">
             <div class="d-none d-lg-block divider-65"></div>

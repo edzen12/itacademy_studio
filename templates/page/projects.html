@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="canvas">
+	<div id="box_wrapper">
+		{% include 'base/header_pages.html' %}
+
+        {% include 'base/breadcrumbs.html' %} 
+
+        {% include 'homepage/block4.html' %}
+
+		{% include 'base/footer.html' %}
+	</div>
+</div>
+{% endblock content %}
