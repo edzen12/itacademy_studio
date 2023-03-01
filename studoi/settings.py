@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'apps.service',
     'apps.about',
     'apps.blog',
+    'apps.contact',
 
     'ckeditor',
     'ckeditor_uploader',
